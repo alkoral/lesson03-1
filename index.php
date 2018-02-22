@@ -127,7 +127,7 @@ class Duck {
     else {
       return $this->price;
     }
-}
+  }
 }
 
 $duck_old = new Duck();
