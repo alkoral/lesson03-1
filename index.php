@@ -1,24 +1,24 @@
 <?php
 echo "<h1>Выводим стоимость товаров</h1>";
 class Car {
-	public $model;
-	public $fuel;
-	public $gearbox;
-	public $color;
-	public $price;
-	public $discount;
-	public $insurance = false;
-	public function addInsurance() {
-		$this->insurance = true;
-	}
-	public function getPrice() {
-		if ($this->discount) {
-			return round($this->price - ($this->price * $this->discount / 100));
-		}
-		else {
-			return $this->price;
-		}
-	}
+  public $model;
+  public $fuel;
+  public $gearbox;
+  public $color;
+  public $price;
+  public $discount;
+  public $insurance = false;
+  public function addInsurance() {
+    $this->insurance = true;
+  }
+  public function getPrice() {
+    if ($this->discount) {
+      return round($this->price - ($this->price * $this->discount / 100));
+    }
+    else {
+      return $this->price;
+    }
+  }
 }
 
 $toyota = new Car();
@@ -42,23 +42,23 @@ $bmw->addInsurance();
 echo "Автомобиль".$bmw->model." стоит ".$bmw->getPrice()." рублей<br>";
 
 class Tv {
-	public $brand;
-	public $screen;
-	public $size;
-	public $color;
-	public $price;
-	public $shipping = false;
-	public function addShipping() {
-		$this->shipping = true;
-	}
-	public function getPrice() {
-		if ($this->shipping) {
-			return ($this->price + $this->shipping=500);
-		}
-		else {
-			return $this->price;
-			}
-		}
+  public $brand;
+  public $screen;
+  public $size;
+  public $color;
+  public $price;
+  public $shipping = false;
+  public function addShipping() {
+    $this->shipping = true;
+  }
+  public function getPrice() {
+    if ($this->shipping) {
+      return ($this->price + $this->shipping=500);
+    }
+    else {
+      return $this->price;
+      }
+    }
 }
 
 $sony = new Tv();
@@ -81,20 +81,20 @@ echo "Телевизор ".$samsung->brand." стоит ".$samsung->getPrice()."
 
 
 class Pen {
-	public $brand;
-	public $material;
-	public $ink_color;
-	public $rechargeable;
-	public $price;
-	public $discount;
-	public function getPrice() {
-		if ($this->discount) {
-			return round($this->price - ($this->price * $this->discount / 100));
-		}
-		else {
-			return $this->price;
-		}
-	}
+  public $brand;
+  public $material;
+  public $ink_color;
+  public $rechargeable;
+  public $price;
+  public $discount;
+  public function getPrice() {
+    if ($this->discount) {
+      return round($this->price - ($this->price * $this->discount / 100));
+    }
+    else {
+      return $this->price;
+    }
+  }
 }
 
 $bic = new Pen();
@@ -114,19 +114,19 @@ $parker->price = 1000;
 echo "Ручка ".$parker->brand." стоит ".$parker->getPrice()." рублей<br>";
 
 class Duck {
-	public $producer;
-	public $weight;
-	public $expires = false;
-	public $price;
-	public function addRecipe() {
-	}
-	public function getPrice() {
-		if ($this->expires) {
-			return $this->price=0;
-		}
-		else {
-			return $this->price;
-		}
+  public $producer;
+  public $weight;
+  public $expires = false;
+  public $price;
+  public function addRecipe() {
+  }
+  public function getPrice() {
+    if ($this->expires) {
+      return $this->price=0;
+    }
+    else {
+      return $this->price;
+    }
 }
 }
 
@@ -145,18 +145,18 @@ $duck_fresh->price = 600;
 echo "Утка фабрики ".$duck_fresh->producer." стоит ".$duck_fresh->getPrice()." рублей<br>";
 
 class Product {
-	public $item;
-	public $category;
-	public $price;
-	public $discount;
-	public function getPrice() {
-		if ($this->discount) {
-			return round($this->price - ($this->price * $this->discount / 100));
-		}
-		else {
-			return $this->price;
-		}
-	}
+  public $item;
+  public $category;
+  public $price;
+  public $discount;
+  public function getPrice() {
+    if ($this->discount) {
+      return round($this->price - ($this->price * $this->discount / 100));
+    }
+    else {
+      return $this->price;
+    }
+  }
 }
 
 $drink = new Product();
@@ -178,30 +178,30 @@ echo "Товар ".$pizza->item." из категории ".$pizza->category." �
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Домашнее задание к лекции 3.1 «Классы и объекты»</title>
-	<style>
-		body {
+  <meta charset="UTF-8">
+  <title>Домашнее задание к лекции 3.1 «Классы и объекты»</title>
+  <style>
+    body {
     font-size: 16px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-		}
-		h1, h2 {
-		font-size: 22px;
-		font-weight: 700;
-		color: blue;
-		}
-		article {
+    }
+    h1, h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: blue;
+    }
+    article {
     display: block;
     position: relative;
-    margin: 0 auto;		
-		width: 800px;
-		}
-		p {
-		font-family: "Arial", Helvetica, sans-serif;
-		font-size: 17px;			
-		}
+    margin: 0 auto;   
+    width: 800px;
+    }
+    p {
+    font-family: "Arial", Helvetica, sans-serif;
+    font-size: 17px;      
+    }
 
-	</style>
+  </style>
 </head>
 <body>
 
